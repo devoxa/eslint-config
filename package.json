@@ -1,0 +1,32 @@
+{
+  "name": "@devoxa/eslint-config",
+  "description": "The sharable configuration for ESLint used in all Devoxa projects",
+  "version": "0.1.0",
+  "main": "eslint.config.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/devoxa/eslint-config"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.ts'"
+  },
+  "eslintConfig": {
+    "extends": "./eslint.config.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint-config-prettier": "^6.11.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0",
+    "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "typescript": "^3.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
