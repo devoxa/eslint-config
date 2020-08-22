@@ -18,9 +18,9 @@
     />
   </a>
 
-  <a href="https://app.circleci.com/pipelines/github/devoxa/eslint-config?branch=master">
+  <a href="https://github.com/devoxa/eslint-config/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/circleci/build/github/devoxa/eslint-config/master?style=flat-square"
+      src="https://img.shields.io/github/workflow/status/devoxa/eslint-config/Continuous%20Integration?style=flat-square"
       alt="Build Status"
     />
   </a>
