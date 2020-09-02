@@ -5,7 +5,7 @@
 
 <!-- Description -->
 <h4 align="center"> 
-  The <a href="https://eslint.org/docs/developer-guide/shareable-configs">sharable configuration</a>
+  The <a href="https://eslint.org/docs/developer-guide/shareable-configs">shareable configuration</a>
   for <a href="https://eslint.org/">ESLint</a> used in all Devoxa projects
 </h4>
 
