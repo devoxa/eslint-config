@@ -25,6 +25,7 @@ module.exports = {
       'error',
       { functions: false, classes: false, variables: true },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
   settings: {
     react: {
