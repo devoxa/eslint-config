@@ -62,7 +62,7 @@ Since the ESLint configuration is for TypeScript projects it is also required th
 It is also recommended to add the following script to your `package.json` for easy usage.
 
 ```json
-"lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.ts'",
+"lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
 ```
 
 ## Extending

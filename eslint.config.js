@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'prettier/@typescript-eslint',
+    'plugin:react/recommended',
   ],
   root: true,
   env: {
@@ -24,5 +25,10 @@ module.exports = {
       'error',
       { functions: false, classes: false, variables: true },
     ],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 }
