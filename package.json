@@ -8,7 +8,7 @@
     "url": "https://github.com/devoxa/eslint-config"
   },
   "scripts": {
-    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.ts'"
+    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "./eslint.config.js"
@@ -16,14 +16,17 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "eslint-config-prettier": "^6.11.0"
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.6"
   },
   "peerDependencies": {
     "eslint": "^7.0.0",
     "typescript": "^3.9.2"
   },
   "devDependencies": {
+    "@types/react": "^16.9.49",
     "eslint": "^7.0.0",
+    "react": "^16.13.1",
     "typescript": "^3.9.2"
   },
   "publishConfig": {
