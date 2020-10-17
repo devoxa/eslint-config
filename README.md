@@ -65,10 +65,16 @@ It is also recommended to add the following script to your `package.json` for ea
 "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
 ```
 
+Additionally, it is recommended to install the
+[VS Code Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) to
+get in-editor warnings.
+
 ## Extending
 
 This configuration is not intended to be changed, but if you have a setup where modification is
-required, it is possible. See the [ESLint docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more details.
+required, it is possible. See the
+[ESLint docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more
+details.
 
 ## Contributors
 
