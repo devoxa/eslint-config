@@ -23,6 +23,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@devoxa/prettier-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-1.0.0.tgz#732a8d78f603d9802751a408914404494812f227"
+  integrity sha512-M/QmEXFxsHgIDhiahUwONSMjv3zYv4BVGUKb/jced4bSJch/GbgXf2BsG6sevD7JFRDwoi4pHX71woYzAWoC3A==
+
 "@eslint/eslintrc@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.0.tgz#99cc0a0584d72f1df38b900fb062ba995f395547"
