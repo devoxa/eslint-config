@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-explicit-any': 2,
     '@typescript-eslint/no-use-before-define': [
       'error',
       { functions: false, classes: false, variables: true },
