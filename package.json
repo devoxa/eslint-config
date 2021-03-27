@@ -8,6 +8,8 @@
     "url": "https://github.com/devoxa/eslint-config"
   },
   "scripts": {
+    "format": "prettier --ignore-path='.gitignore' --list-different --write .",
+    "format:check": "prettier --ignore-path='.gitignore' --check .",
     "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
@@ -18,7 +20,6 @@
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.21.2"
   },
   "peerDependencies": {
