@@ -27,7 +27,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // Don't allow "any" at all
-    '@typescript-eslint/no-explicit-any': 2,
+    '@typescript-eslint/no-explicit-any': 'error',
 
     // Allow using functions that are defined later in the file (fine thanks to hoisting)
     '@typescript-eslint/no-use-before-define': [
@@ -36,10 +36,10 @@ module.exports = {
     ],
 
     // This rule makes no difference - ' and " are fine, > and } are already compile errors
-    'react/no-unescaped-entities': 0,
+    'react/no-unescaped-entities': 'off',
 
     // Disable validation of prop types, because we use TS instead and it gets confused
-    'react/prop-types': 0,
+    'react/prop-types': 'off',
   },
   settings: {
     react: {
