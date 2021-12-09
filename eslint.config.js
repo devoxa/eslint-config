@@ -29,6 +29,9 @@ module.exports = {
     // Don't allow "any" at all
     '@typescript-eslint/no-explicit-any': 'error',
 
+    // Make sure we are awaiting or explicitly voiding all Promises
+    '@typescript-eslint/no-floating-promises': 'error',
+
     // Allow using functions that are defined later in the file (fine thanks to hoisting)
     '@typescript-eslint/no-use-before-define': [
       'error',
