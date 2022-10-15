@@ -2,7 +2,7 @@
   "name": "@devoxa/eslint-config",
   "description": "The shareable configuration for ESLint used in all Devoxa projects",
   "version": "3.0.1",
-  "main": "eslint.config.js",
+  "main": "eslint-config.js",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/devoxa/eslint-config"
@@ -13,7 +13,7 @@
     "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
-    "extends": "./eslint.config.js"
+    "extends": "./eslint-config.js"
   },
   "prettier": "@devoxa/prettier-config",
   "dependencies": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@devoxa/prettier-config": "1.0.2",
     "@types/react": "18.0.21",
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "prettier": "2.7.1",
     "react": "18.2.0",
     "typescript": "4.8.4"
