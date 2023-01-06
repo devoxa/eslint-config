@@ -43,6 +43,16 @@ module.exports = {
 
     // Disable validation of prop types, because we use TS instead and it gets confused
     'react/prop-types': 'off',
+
+    // Disable specific syntax features
+    'no-restricted-syntax': [
+      'error',
+      // Don't allow TS enums at all, since they have multiple unintuitive footguns
+      {
+        selector: 'TSEnumDeclaration',
+        message: 'Unexpected enum. Use a literal string union or a const object instead.',
+      },
+    ],
   },
   settings: {
     react: {
