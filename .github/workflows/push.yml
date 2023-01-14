@@ -30,5 +30,8 @@ jobs:
       - name: 'Install dependencies'
         run: yarn install --frozen-lockfile
 
+      - name: 'Check code formatting'
+        run: yarn format:check
+
       - name: 'Run linter'
         run: yarn lint
