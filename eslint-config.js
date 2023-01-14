@@ -45,6 +45,9 @@ module.exports = {
     // Disable validation of prop types, because we use TS instead and it gets confused
     'react/prop-types': 'off',
 
+    // Make sure comments are starting with an uppercase letter, to encourage correct grammar
+    'capitalized-comments': ['error', 'always', { ignoreConsecutiveComments: true }],
+
     // Disable specific syntax features
     'no-restricted-syntax': [
       'error',
