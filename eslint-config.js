@@ -46,7 +46,14 @@ module.exports = {
     'react/prop-types': 'off',
 
     // Make sure comments are starting with an uppercase letter, to encourage correct grammar
-    'capitalized-comments': ['error', 'always', { ignoreConsecutiveComments: true }],
+    'capitalized-comments': [
+      'error',
+      'always',
+      {
+        ignorePattern: ['prettier'],
+        ignoreConsecutiveComments: true,
+      },
+    ],
 
     // Disable specific syntax features
     'no-restricted-syntax': [
