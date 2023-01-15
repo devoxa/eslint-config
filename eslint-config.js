@@ -50,7 +50,7 @@ module.exports = {
       'error',
       'always',
       {
-        ignorePattern: ['prettier'],
+        ignorePattern: 'prettier',
         ignoreConsecutiveComments: true,
       },
     ],
