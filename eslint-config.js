@@ -47,10 +47,10 @@ module.exports = {
 
     // Make sure comments are starting with an uppercase letter, to encourage correct grammar
     'capitalized-comments': [
-      'error',
+      'warn',
       'always',
       {
-        ignorePattern: 'prettier',
+        ignorePattern: 'prettier|c8',
         ignoreConsecutiveComments: true,
       },
     ],
