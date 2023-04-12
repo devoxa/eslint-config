@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@devoxa/prettier-config": "2.0.1",
-    "@types/react": "18.0.34",
+    "@types/react": "18.0.35",
     "eslint": "8.38.0",
     "prettier": "2.8.7",
     "react": "18.2.0",
