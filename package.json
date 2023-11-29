@@ -38,6 +38,6 @@
     "access": "public"
   },
   "volta": {
-    "node": "18.19.0"
+    "node": "20.10.0"
   }
 }
