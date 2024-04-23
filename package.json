@@ -17,10 +17,10 @@
   },
   "prettier": "@devoxa/prettier-config",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "6.20.0",
-    "@typescript-eslint/parser": "6.20.0",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-react": "7.33.2"
+    "eslint-plugin-react": "7.34.1"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
@@ -29,11 +29,11 @@
   "devDependencies": {
     "@devoxa/prettier-config": "2.0.2",
     "@types/node": "20.9.5",
-    "@types/react": "18.2.48",
-    "eslint": "8.56.0",
-    "prettier": "3.2.2",
+    "@types/react": "18.2.79",
+    "eslint": "8.57.0",
+    "prettier": "3.2.5",
     "react": "18.2.0",
-    "typescript": "5.3.3"
+    "typescript": "5.4.5"
   },
   "publishConfig": {
     "access": "public"
