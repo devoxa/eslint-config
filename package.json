@@ -10,7 +10,7 @@
   "scripts": {
     "format": "prettier --ignore-path='.gitignore' --list-different --write .",
     "format:check": "prettier --ignore-path='.gitignore' --check .",
-    "lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
+    "lint": "./lint-setup.sh && eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "./eslint-config.js"
