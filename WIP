@@ -1,0 +1,29 @@
+// command: '{src,tests}/**/*.{ts,tsx}'
+
+// TODO This has to be converted to the new shit tier syntax we got, and then
+// - we need to add .gitignore -> ignore rule conversion (automatic somehow? i think needs a config of ignore file paths)
+// - update readme on how to use that - i'm imagining something like `module.exports = buildShitConfig({ ignorePaths: ['.gitignore' ]})` or something.
+// - remove `--ignore-path` from the command (readme) and make sure the file is up-to-date in all repos + no more ignore file via the housekeeping thing
+// - no more `eslintConfig` in the package.json
+// TODO JUST START FROM SCRATCH WITH THIS:
+// SEE: https://typescript-eslint.io/packages/typescript-eslint#config
+
+
+module.exports = {
+  
+
+
+
+  root: true,
+
+  env: {
+    node: true,
+    jest: true,
+  },
+
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+}
