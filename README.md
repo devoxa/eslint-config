@@ -47,13 +47,15 @@ The configuration also has a peer dependency on `typescript@^3.9.2`.
 
 ## Usage
 
-To enable the rules, add a `eslintConfig` property in your `package.json`. See the
+
+To enable the rules TODO. See the
 [ESLint configuration docs](https://eslint.org/docs/user-guide/configuring) for more details.
 
-```json
-"eslintConfig": {
-  "extends": "@devoxa"
-},
+```js
+const config = require('./eslint-config')
+
+// First one gitignore file paths, second one is configs that are merged with tseslint.config (link to this)
+module.exports = config(['.gitignore'])
 ```
 
 Since the ESLint configuration is for TypeScript projects it is also required that you have a
