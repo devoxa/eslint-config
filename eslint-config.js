@@ -3,7 +3,7 @@ const jsEslint = require('@eslint/js')
 const tsEslint = require('typescript-eslint')
 const parseGitignore = require('parse-gitignore')
 const eslintConfigPrettier = require('eslint-config-prettier')
-const eslintPluginReact = require('eslint-plugin-react/configs/recommended')
+const eslintPluginReact = require('eslint-plugin-react')
 
 module.exports = function (options) {
   const { ignoreFiles = [], configs = [] } = options
@@ -27,7 +27,7 @@ module.exports = function (options) {
     },
 
     // Linting with React/JSX support
-    eslintPluginReact,
+    eslintPluginReact.configs.flat.recommended,
     { settings: { react: { version: 'detect' } } },
 
     // Disable rules that conflict with Prettier
