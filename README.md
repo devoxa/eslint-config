@@ -47,13 +47,22 @@ The configuration also has a peer dependency on `typescript@^3.9.2`.
 
 ## Usage
 
-To enable the rules, add a `eslintConfig` property in your `package.json`. See the
+To enable the rules, add a `eslint.config.js` file to your project. See the
 [ESLint configuration docs](https://eslint.org/docs/user-guide/configuring) for more details.
 
-```json
-"eslintConfig": {
-  "extends": "@devoxa"
-},
+```js
+const config = require('@devoxa/eslint-config')
+
+module.exports = config({
+  // (Recommended) Files (in gitignore syntax) that will be transformed into ignore configs
+  ignoreFiles: ['.gitignore'],
+
+  // (Optional) Additional configs that will be spread into the main config
+  // See https://typescript-eslint.io/packages/typescript-eslint#config
+  configs: [
+    /* ... */
+  ],
+})
 ```
 
 Since the ESLint configuration is for TypeScript projects it is also required that you have a
@@ -62,7 +71,7 @@ Since the ESLint configuration is for TypeScript projects it is also required th
 It is also recommended to add the following script to your `package.json` for easy usage.
 
 ```json
-"lint": "eslint --ignore-path='.gitignore' '{src,tests}/**/*.{ts,tsx}'"
+"lint": "eslint '{src,tests}/**/*.{ts,tsx}'"
 ```
 
 Additionally, it is recommended to install the
@@ -72,9 +81,8 @@ get in-editor warnings.
 ## Extending
 
 This configuration is not intended to be changed, but if you have a setup where modification is
-required, it is possible. See the
-[ESLint docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more
-details.
+required, it is possible. To extend a configuration you can use the `configs` option as described
+above.
 
 ## Contributors
 
