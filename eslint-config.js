@@ -17,6 +17,7 @@ module.exports = function (ignorePaths, configs = []) {
 
     // Linting with React/JSX support
     eslintPluginReact,
+    { settings: { react: { version: 'detect' } } },
 
     // Disable rules that conflict with Prettier
     eslintConfigPrettier,
