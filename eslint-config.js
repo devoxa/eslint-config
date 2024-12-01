@@ -51,6 +51,9 @@ module.exports = function (options) {
         // Make sure we are awaiting or explicitly voiding all Promises
         '@typescript-eslint/no-floating-promises': 'error',
 
+        // Require functions to define their return types for clearer contracts
+        '@typescript-eslint/explicit-function-return-type': 'error',
+
         // Allow using functions that are defined later in the file (fine thanks to hoisting)
         '@typescript-eslint/no-use-before-define': [
           'error',
