@@ -82,6 +82,20 @@ module.exports = function (options) {
       },
     },
 
+    // Custom rule overrides for test files
+    {
+      files: ['**/*.spec.ts', '**/*.spec.tsx'],
+      rules: {
+        // Allow `any` type usage in tests (for less frustrating mocking of complex types)
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+      },
+    },
+
     // Any additional configs that are passed in
     ...configs
   )
