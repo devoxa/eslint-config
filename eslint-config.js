@@ -51,6 +51,13 @@ module.exports = function (options) {
         // Make sure we are awaiting or explicitly voiding all Promises
         '@typescript-eslint/no-floating-promises': 'error',
 
+        // Don't check void returns for JSX attributes, because it's a common React pattern
+        // (e.g. `onClick={() => returnsPromiseVoid()}`)
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          { checksVoidReturn: { attributes: false } },
+        ],
+
         // Require functions to define their return types for clearer contracts
         '@typescript-eslint/explicit-function-return-type': 'error',
 
