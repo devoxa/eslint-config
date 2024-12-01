@@ -4,6 +4,7 @@ const tsEslint = require('typescript-eslint')
 const parseGitignore = require('parse-gitignore')
 const eslintConfigPrettier = require('eslint-config-prettier')
 const eslintPluginReact = require('eslint-plugin-react')
+const eslintPluginStylistic = require('@stylistic/eslint-plugin')
 
 module.exports = function (options) {
   const { ignoreFiles = [], configs = [] } = options
@@ -30,6 +31,15 @@ module.exports = function (options) {
     eslintPluginReact.configs.flat.recommended,
     { settings: { react: { version: 'detect' } } },
 
+    // Custom stylistic rules that Prettier doesn't handle
+    {
+      plugins: { '@stylistic': eslintPluginStylistic },
+      rules: {
+        // Require single quotes for strings, except when using templating or to prevent escaping
+        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+      },
+    },
+
     // Disable rules that conflict with Prettier
     eslintConfigPrettier,
 
@@ -51,6 +61,16 @@ module.exports = function (options) {
         // Make sure we are awaiting or explicitly voiding all Promises
         '@typescript-eslint/no-floating-promises': 'error',
 
+        // Don't check void returns for JSX attributes, because it's a common React pattern
+        // (e.g. `onClick={() => returnsPromiseVoid()}`)
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          { checksVoidReturn: { attributes: false } },
+        ],
+
+        // Require functions to define their return types for clearer contracts
+        '@typescript-eslint/explicit-function-return-type': 'error',
+
         // Allow using functions that are defined later in the file (fine thanks to hoisting)
         '@typescript-eslint/no-use-before-define': [
           'error',
@@ -62,6 +82,9 @@ module.exports = function (options) {
 
         // Disable validation of prop types, because we use TS instead and it gets confused
         'react/prop-types': 'off',
+
+        // Make sure we're not using any deprecated APIs
+        '@typescript-eslint/no-deprecated': 'error',
 
         // Make sure comments are starting with an uppercase letter, to encourage correct grammar
         'capitalized-comments': [
@@ -78,7 +101,27 @@ module.exports = function (options) {
             selector: 'TSEnumDeclaration',
             message: 'Unexpected enum. Use a literal string union or a const object instead.',
           },
+          // Don't allow the `ReturnType<T>` generic, since this is nearly always a bad pattern and
+          // indicates that something is missing proper typing
+          {
+            selector: "TSTypeReference[typeName.name='ReturnType']",
+            message: "Unexpected 'ReturnType<T>'. Use an explicit type instead.",
+          },
         ],
+      },
+    },
+
+    // Custom rule overrides for test files
+    {
+      files: ['**/*.spec.ts', '**/*.spec.tsx'],
+      rules: {
+        // Allow `any` type usage in tests (for less frustrating mocking of complex types)
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
       },
     },
 
