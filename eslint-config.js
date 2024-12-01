@@ -4,6 +4,7 @@ const tsEslint = require('typescript-eslint')
 const parseGitignore = require('parse-gitignore')
 const eslintConfigPrettier = require('eslint-config-prettier')
 const eslintPluginReact = require('eslint-plugin-react')
+const eslintPluginStylistic = require('@stylistic/eslint-plugin')
 
 module.exports = function (options) {
   const { ignoreFiles = [], configs = [] } = options
@@ -29,6 +30,15 @@ module.exports = function (options) {
     // Linting with React/JSX support
     eslintPluginReact.configs.flat.recommended,
     { settings: { react: { version: 'detect' } } },
+
+    // Custom stylistic rules that Prettier doesn't handle
+    {
+      plugins: { '@stylistic': eslintPluginStylistic },
+      rules: {
+        // Require single quotes for strings, except when using templating or to prevent escaping
+        '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+      },
+    },
 
     // Disable rules that conflict with Prettier
     eslintConfigPrettier,
