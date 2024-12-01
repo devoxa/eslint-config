@@ -83,6 +83,9 @@ module.exports = function (options) {
         // Disable validation of prop types, because we use TS instead and it gets confused
         'react/prop-types': 'off',
 
+        // Make sure we're not using any deprecated APIs
+        '@typescript-eslint/no-deprecated': 'error',
+
         // Make sure comments are starting with an uppercase letter, to encourage correct grammar
         'capitalized-comments': [
           'warn',
