@@ -88,6 +88,12 @@ module.exports = function (options) {
             selector: 'TSEnumDeclaration',
             message: 'Unexpected enum. Use a literal string union or a const object instead.',
           },
+          // Don't allow the `ReturnType<T>` generic, since this is nearly always a bad pattern and
+          // indicates that something is missing proper typing
+          {
+            selector: "TSTypeReference[typeName.name='ReturnType']",
+            message: "Unexpected 'ReturnType<T>'. Use an explicit type instead.",
+          },
         ],
       },
     },
