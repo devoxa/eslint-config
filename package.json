@@ -1,7 +1,7 @@
 {
   "name": "@devoxa/eslint-config",
   "description": "The shareable configuration for ESLint used in all Devoxa projects",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "main": "eslint-config.js",
   "license": "MIT",
   "repository": {
