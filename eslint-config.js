@@ -49,9 +49,6 @@ module.exports = function (options) {
         // Don't require a weird naming convention for interfaces
         '@typescript-eslint/interface-name-prefix': 'off',
 
-        // Allow inferring types for functions
-        '@typescript-eslint/explicit-function-return-type': 'off',
-
         // Allow inferring types for exported things
         '@typescript-eslint/explicit-module-boundary-types': 'off',
 
