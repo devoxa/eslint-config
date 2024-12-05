@@ -90,6 +90,9 @@ module.exports = function (options) {
           { ignorePattern: 'prettier|c8', ignoreConsecutiveComments: true },
         ],
 
+        // Enforce generic array types over array literals
+        '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
+
         // Disable specific syntax features
         'no-restricted-syntax': [
           'error',
