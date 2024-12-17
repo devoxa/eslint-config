@@ -113,7 +113,13 @@ module.exports = function (options) {
 
     // Custom rule overrides for test files
     {
-      files: ['**/*.spec.ts', '**/*.spec.tsx'],
+      files: [
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+        '**/__mocks__/**/*.ts',
+        '**/__fixtures__/**/*.ts',
+        '**/__helpers__/**/*.ts',
+      ],
       rules: {
         // Allow `any` type usage in tests (for less frustrating mocking of complex types)
         '@typescript-eslint/no-explicit-any': 'off',
