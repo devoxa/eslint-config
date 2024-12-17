@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
 // This is a Button component
-export const Button = (): ReactElement => {
+export function Button(): ReactElement {
   return <div>Foo Bar</div>
 }
