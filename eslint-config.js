@@ -128,6 +128,9 @@ module.exports = function (options) {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/no-unsafe-return': 'off',
+
+        // Allow unbound methods in tests (valid for jest mock assertions)
+        '@typescript-eslint/unbound-method': 'off',
       },
     },
 
