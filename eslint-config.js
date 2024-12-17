@@ -29,6 +29,7 @@ module.exports = function (options) {
 
     // Linting with React/JSX support
     eslintPluginReact.configs.flat.recommended,
+    eslintPluginReact.configs.flat['jsx-runtime'], // Modern JSX transform
     { settings: { react: { version: 'detect' } } },
 
     // Custom stylistic rules that Prettier doesn't handle
@@ -83,6 +84,12 @@ module.exports = function (options) {
         // Make sure we're not using any deprecated APIs
         '@typescript-eslint/no-deprecated': 'error',
 
+        // Enforce specific function type for React component functions
+        'react/function-component-definition': [
+          'error',
+          { namedComponents: 'function-declaration', unnamedComponents: 'arrow-function' },
+        ],
+
         // Make sure comments are starting with an uppercase letter, to encourage correct grammar
         'capitalized-comments': [
           'warn',
@@ -113,7 +120,13 @@ module.exports = function (options) {
 
     // Custom rule overrides for test files
     {
-      files: ['**/*.spec.ts', '**/*.spec.tsx'],
+      files: [
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+        '**/__mocks__/**/*.ts',
+        '**/__fixtures__/**/*.ts',
+        '**/__helpers__/**/*.ts',
+      ],
       rules: {
         // Allow `any` type usage in tests (for less frustrating mocking of complex types)
         '@typescript-eslint/no-explicit-any': 'off',
@@ -122,6 +135,9 @@ module.exports = function (options) {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/no-unsafe-return': 'off',
+
+        // Allow unbound methods in tests (valid for jest mock assertions)
+        '@typescript-eslint/unbound-method': 'off',
       },
     },
 
