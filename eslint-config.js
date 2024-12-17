@@ -84,6 +84,12 @@ module.exports = function (options) {
         // Make sure we're not using any deprecated APIs
         '@typescript-eslint/no-deprecated': 'error',
 
+        // Enforce specific function type for React component functions
+        'react/function-component-definition': [
+          'error',
+          { namedComponents: 'function-declaration', unnamedComponents: 'arrow-function' },
+        ],
+
         // Make sure comments are starting with an uppercase letter, to encourage correct grammar
         'capitalized-comments': [
           'warn',
