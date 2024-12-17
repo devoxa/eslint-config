@@ -29,6 +29,7 @@ module.exports = function (options) {
 
     // Linting with React/JSX support
     eslintPluginReact.configs.flat.recommended,
+    eslintPluginReact.configs.flat['jsx-runtime'], // Modern JSX transform
     { settings: { react: { version: 'detect' } } },
 
     // Custom stylistic rules that Prettier doesn't handle
