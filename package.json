@@ -31,7 +31,7 @@
     "@types/react": "19.2.7",
     "eslint": "9.39.1",
     "prettier": "3.7.4",
-    "react": "19.2.0",
+    "react": "19.2.1",
     "typescript": "5.9.3"
   },
   "publishConfig": {
