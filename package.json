@@ -30,7 +30,7 @@
     "@types/node": "20.9.5",
     "@types/react": "19.2.9",
     "eslint": "9.39.2",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "react": "19.2.3",
     "typescript": "5.9.3"
   },
