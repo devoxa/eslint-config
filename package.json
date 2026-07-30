@@ -28,10 +28,10 @@
   "devDependencies": {
     "@devoxa/prettier-config": "2.0.3",
     "@types/node": "20.9.5",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.18",
     "eslint": "9.39.4",
     "prettier": "3.8.1",
-    "react": "19.2.4",
+    "react": "19.2.8",
     "typescript": "5.9.3"
   },
   "publishConfig": {
